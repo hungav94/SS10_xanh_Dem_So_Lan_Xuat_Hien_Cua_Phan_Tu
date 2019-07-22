@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số lần xuất hiện của phần tử</title>
+</head>
+<body>
+<script>
+    function count(arr, data) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == data) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    function displayArr() {
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + ' ');
+        }
+        document.write('<br>');
+    }
+
+    let arr = [];
+    for (let i = 0; i < 100; i++) {
+        arr[i] = Math.floor(Math.random() * 101);
+    }
+    displayArr(arr);
+
+    let num = prompt('Nhập số cần đếm');
+    let result = count(arr, num);
+    document.write('số ' + num + ' xuất hiện ' + result + ' lần');
+</script>
+</body>
+</html>
